@@ -1,0 +1,11 @@
+repos:
+-   repo: https://github.com/khulnasoft/pre-commit-golang.git
+    rev: 314766a2c26b7f32641addbdb0e7e451320ff1f0
+    hooks:
+    -   id: go-fmt
+    -   id: go-vet
+    -   id: go-lint
+        entry: run-go-lint.sh
+        language: script
+        files: \.go$
+        exclude: kschat\/types\/.*$
